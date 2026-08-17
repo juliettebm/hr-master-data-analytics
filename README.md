@@ -18,6 +18,7 @@ hr-master-data-analytics/
 │   └── *.png                           # figures exportées du notebook
 ├── DATA_CATALOG.md                     # dictionnaire de champs, glossaire, règles de qualité
 ├── BACKLOG.md                          # epics, user stories, KPIs, roadmap, definition of done
+├── USER_GUIDE.md                       # guide de lecture du dashboard, indépendant du notebook
 ├── requirements.txt
 └── README.md
 ```
@@ -43,11 +44,14 @@ jupyter notebook notebooks/01_hr_analytics_kpis.ipynb
 
 1. **Contexte et objectif**
 2. **Audit qualité** : complétude, unicité de la clé primaire (`EmployeeNumber`), détection des champs constants (`EmployeeCount`, `Over18`, `StandardHours`), exécuté en code, pas vérifié à l'œil.
-3. **KPI attrition par département et par poste**, avec effectifs affichés à côté du taux pour ne pas lire un pourcentage hors contexte.
-4. **Facteurs associés à l'attrition** (heures supplémentaires, satisfaction au poste, ancienneté depuis la dernière promotion), chacun testé statistiquement (Chi², Mann-Whitney U), pas juste comparé visuellement.
-5. **Équité salariale par genre**, contrôlée par niveau de poste (`JobLevel`), pour éviter la moyenne brute trompeuse.
-6. **Bien-être par département** (Work-Life Balance déclaré).
-7. **Synthèse** : ce qui a été livré par rapport au backlog, et les limites qui ne sont pas masquées.
+3. **Requêtage SQL** (DuckDB, dialecte transposable à Snowflake) : les KPIs d'attrition par département et par poste sont écrits en `SELECT` / `GROUP BY` explicites, pas en `pandas.groupby` caché.
+4. **KPI attrition par département et par poste**, avec effectifs affichés à côté du taux pour ne pas lire un pourcentage hors contexte.
+5. **Facteurs associés à l'attrition** (heures supplémentaires, satisfaction au poste, ancienneté depuis la dernière promotion), chacun testé statistiquement (Chi², Mann-Whitney U), pas juste comparé visuellement.
+6. **Équité salariale par genre**, contrôlée par niveau de poste (`JobLevel`), pour éviter la moyenne brute trompeuse.
+7. **Bien-être par département** (Work-Life Balance déclaré).
+8. **Synthèse** : ce qui a été livré par rapport au backlog, et les limites qui ne sont pas masquées.
+
+Un guide de lecture indépendant, pensé pour quelqu'un qui n'a pas écrit le code, est disponible dans `USER_GUIDE.md`.
 
 ## Principaux résultats (obtenus en exécutant le notebook)
 
