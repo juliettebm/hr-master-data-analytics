@@ -1,4 +1,10 @@
-# HR Master Data Analytics
+# 🧑‍💼 HR Master Data Analytics
+
+[![Dataset](https://img.shields.io/badge/Dataset-IBM%20HR%20Analytics-blue?logo=databricks&logoColor=white)](https://www.kaggle.com/datasets/pavansubhasht/ibm-hr-analytics-attrition-dataset)
+[![Python](https://img.shields.io/badge/Python-3.x-blue?logo=python&logoColor=white)](https://www.python.org/)
+[![SQL](https://img.shields.io/badge/SQL-DuckDB%20(Snowflake--transposable)-lightgrey?logo=duckdb&logoColor=white)](https://duckdb.org/)
+[![SciPy](https://img.shields.io/badge/SciPy-Chi%C2%B2%20%7C%20Mann--Whitney%20U-orange?logo=scipy&logoColor=white)](https://scipy.org/)
+[![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-F37626?logo=jupyter&logoColor=white)](https://jupyter.org/)
 
 Un catalogue de données RH, un backlog produit et un dashboard d'attrition construits dans cet ordre-là, comme le ferait un Product Owner sur un produit data : besoin métier → user stories → KPIs → qualité de la donnée vérifiée → restitution.
 
