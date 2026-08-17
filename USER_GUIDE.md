@@ -40,6 +40,6 @@ Tous les KPIs de ce document reposent sur un jeu de données audité (`DATA_CATA
 
 **Pourquoi certains chiffres viennent de requêtes SQL et d'autres de calculs Python ?** Les agrégations simples (taux par département, par poste) sont écrites en SQL, transposable directement à un entrepôt comme Snowflake. Les tests statistiques et les graphiques restent en Python, ce n'est pas le rôle du SQL.
 
-**Ce dashboard reflète-t-il une vraie entreprise ?** Non, le jeu de données est un jeu public et fictif (IBM), utilisé pour démontrer la méthode. Voir la section "Limites" du notebook pour le détail.
+**Ce dashboard reflète-t-il une vraie entreprise ?** Non, le jeu de données est fictif, généré par IBM pour démontrer son outil Watson Analytics, pas une extraction réelle de SIRH. Il est utilisé ici pour démontrer la méthode (catalogue, backlog, SQL, modèle), pas pour produire un diagnostic RH généralisable. Voir la section "Limites" du notebook pour le détail.
 
 **Qui contacter si un chiffre semble faux ?** Dans un contexte réel, ce serait le rôle du Product Owner du produit data de trancher, en remontant au catalogue de données (`DATA_CATALOG.md`) pour vérifier si la définition du champ correspond à l'usage qui en est fait ici.
