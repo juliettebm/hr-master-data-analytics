@@ -6,11 +6,11 @@
 [![SciPy](https://img.shields.io/badge/SciPy-Chi%C2%B2%20%7C%20Mann--Whitney%20U-orange?logo=scipy&logoColor=white)](https://scipy.org/)
 [![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-F37626?logo=jupyter&logoColor=white)](https://jupyter.org/)
 
-Analyse de l'attrition, des facteurs de départ et de l'équité salariale sur 1 470 collaborateurs (jeu de données IBM HR Analytics), construite comme un vrai produit data d'entreprise plutôt qu'une simple étude : catalogue de données audité, backlog produit avec user stories et KPIs, requêtage SQL, et un dashboard accompagné de son guide de lecture.
+Une direction RH me confie le suivi de l'attrition et de l'équité salariale sur 1 470 collaborateurs (IBM HR Analytics). Avant de livrer le moindre chiffre, je documente la donnée (catalogue), je cadre le besoin en backlog (user stories, KPIs), je requête en SQL, puis je restitue avec un guide de lecture.
 
-## Objectif
+## Mission
 
-Ce n'est pas un projet de prédiction : il n'y a pas de modèle de machine learning ici, l'attrition n'est pas prédite, elle est mesurée et expliquée. Le sujet est en amont du dashboard, pas la performance d'un modèle : avant de calculer le moindre KPI RH, la donnée est documentée (dictionnaire de champs, règles de qualité), le besoin métier est formulé en user stories avec critères d'acceptation, et les KPIs qui en découlent sont justifiés plutôt qu'arbitraires. Le résultat final documente lui-même sa propre lecture et ses limites, plutôt que de livrer un chiffre sans contexte.
+Donner à la direction RH une vision fiable de l'attrition, de ses facteurs, et de l'équité salariale, appuyée sur un référentiel de données documenté plutôt que sur un export ponctuel. Avant de calculer le moindre KPI, je documente la donnée (dictionnaire de champs, règles de qualité), je cadre le besoin métier en user stories avec critères d'acceptation, et je requête en SQL. L'attrition n'est pas prédite ici, elle est mesurée et expliquée : la valeur est dans la méthode qui précède le chiffre.
 
 ## Structure du projet
 
@@ -76,8 +76,6 @@ Python, pandas, matplotlib, seaborn, scipy (tests statistiques), Jupyter, nbform
 **Pourquoi des tests statistiques plutôt que des graphiques seuls pour les facteurs d'attrition ?** Un graphique peut suggérer une différence qui n'est qu'un artefact d'échantillonnage. Le test (Chi² pour les variables catégorielles/ordinales, Mann-Whitney U pour la variable continue non gaussienne) donne un seuil de décision explicite plutôt qu'une impression visuelle.
 
 **Pourquoi contrôler l'écart salarial par niveau de poste plutôt qu'une moyenne brute par genre ?** Si la répartition hommes/femmes n'est pas homogène entre niveaux hiérarchiques, une moyenne brute peut afficher un écart qui n'existe pas à niveau égal, ou masquer un écart réel. Contrôler par `JobLevel` évite ce biais de composition.
-
-**Pourquoi le volet "animation de communauté / co-design" du backlog n'a pas été simulé ?** Parce que ce projet est réalisé en solo sur un jeu de données public, prétendre à un cycle de co-design ou de beta-test inventé serait trompeur. Le backlog est structuré comme si ce cycle existait (c'est la méthode qui est démontrée), la note de transparence dans `BACKLOG.md` le dit explicitement.
 
 ## Source des données
 

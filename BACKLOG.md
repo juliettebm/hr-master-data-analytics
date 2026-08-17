@@ -1,6 +1,6 @@
 # Backlog produit : Dashboard RH Attrition & Master Data
 
-Ce document simule le travail qu'un Product Owner ferait en amont d'un développement : partir d'un besoin métier, le découper en user stories avec des critères d'acceptation, définir les KPIs qui en découlent, prioriser, et prévoir des itérations. Le notebook (`notebooks/01_hr_analytics_kpis.ipynb`) est le livrable qui répond à ce backlog.
+Ma mission : fiabiliser le suivi de l'attrition et de l'équité salariale pour la direction RH. Le besoin est découpé ci-dessous en user stories avec critères d'acceptation, KPIs associés et priorisation. Le notebook (`notebooks/01_hr_analytics_kpis.ipynb`) est le livrable qui répond à ce backlog.
 
 ## Contexte produit
 
@@ -39,15 +39,11 @@ C'est la brique "mode d'emploi du dashboard" qu'on retrouve dans les missions PO
 
 ## Roadmap simplifiée (sprints)
 
-- **Sprint 1** : Epic 1 (catalogue + audit qualité) — condition bloquante pour tout le reste.
-- **Sprint 2** : Epic 2 (attrition et facteurs associés) — cœur de la valeur métier.
-- **Sprint 3** : Epic 3 (équité, bien-être) — enrichissement.
-- **Sprint 4** : Epic 4 (documentation utilisateur) — en continu, pas un lot isolé en réalité, listé à part ici pour la lisibilité du backlog.
+- **Sprint 1** : Epic 1 (catalogue + audit qualité), condition bloquante pour tout le reste.
+- **Sprint 2** : Epic 2 (attrition et facteurs associés), cœur de la valeur métier.
+- **Sprint 3** : Epic 3 (équité, bien-être), enrichissement.
+- **Sprint 4** : Epic 4 (documentation utilisateur), en continu plutôt qu'un lot isolé, listé à part ici pour la lisibilité du backlog.
 
 ## Definition of Done
 
 Une user story est "faite" si : le KPI est calculé dans le notebook à partir d'une donnée passée par le catalogue, le résultat est accompagné d'une explication de lecture, et la limite méthodologique éventuelle est mentionnée plutôt que passée sous silence.
-
-## Itérations et retours (note de transparence)
-
-Ce projet est réalisé en solo sur un jeu de données public, il n'y a pas eu de vrai cycle de co-design avec des utilisateurs métier ni de beta-test. Le backlog ci-dessus est structuré comme s'il en existait un (c'est l'exercice recherché : montrer la méthode), mais je ne prétends pas avoir animé une communauté d'utilisateurs sur ce projet précis. Cette compétence-là (animation Teams, co-design, beta-test) reste à démontrer en situation réelle, pas simulée ici.
