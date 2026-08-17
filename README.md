@@ -6,11 +6,11 @@
 [![SciPy](https://img.shields.io/badge/SciPy-Chi%C2%B2%20%7C%20Mann--Whitney%20U-orange?logo=scipy&logoColor=white)](https://scipy.org/)
 [![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-F37626?logo=jupyter&logoColor=white)](https://jupyter.org/)
 
-Un catalogue de données RH, un backlog produit et un dashboard d'attrition construits dans cet ordre-là, comme le ferait un Product Owner sur un produit data : besoin métier → user stories → KPIs → qualité de la donnée vérifiée → restitution.
+Analyse de l'attrition, des facteurs de départ et de l'équité salariale sur 1 470 collaborateurs (jeu de données IBM HR Analytics), construite comme un vrai produit data d'entreprise plutôt qu'une simple étude : catalogue de données audité, backlog produit avec user stories et KPIs, requêtage SQL, et un dashboard accompagné de son guide de lecture.
 
 ## Objectif
 
-Ce projet ne cherche pas à prédire l'attrition avec un modèle de machine learning, ce n'est pas son sujet. Il montre la méthode qui précède un dashboard en entreprise : documenter la donnée avant de la manipuler (Master Data, gouvernance), formuler le besoin en user stories avec critères d'acceptation, en tirer des KPIs justifiés plutôt qu'arbitraires, puis livrer un résultat qui documente sa propre lecture et ses limites.
+Ce n'est pas un projet de prédiction : il n'y a pas de modèle de machine learning ici, l'attrition n'est pas prédite, elle est mesurée et expliquée. Le sujet est en amont du dashboard, pas la performance d'un modèle : avant de calculer le moindre KPI RH, la donnée est documentée (dictionnaire de champs, règles de qualité), le besoin métier est formulé en user stories avec critères d'acceptation, et les KPIs qui en découlent sont justifiés plutôt qu'arbitraires. Le résultat final documente lui-même sa propre lecture et ses limites, plutôt que de livrer un chiffre sans contexte.
 
 ## Structure du projet
 
