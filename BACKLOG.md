@@ -21,7 +21,7 @@ Sans ça, n'importe quel KPI construit dessus est invérifiable.
 | # | User story | Critères d'acceptation | KPI associé | Priorité |
 |---|---|---|---|---|
 | 2.1 | En tant que HR Business Partner, je veux voir le taux d'attrition par département et par poste afin de prioriser mes actions de rétention | Le dashboard affiche un taux d'attrition ventilé, avec les effectifs sous-jacents visibles (pas juste un %) | Taux d'attrition par `Department` / `JobRole` | Must |
-| 2.2 | En tant que HR Business Partner, je veux comprendre quels facteurs sont associés à l'attrition (satisfaction, heures sup, ancienneté sans promotion) afin d'agir sur les causes plutôt que sur le symptôme | Le dashboard croise `Attrition` avec au moins 3 facteurs différents, avec un test statistique associé, pas juste une intuition visuelle | Attrition vs `JobSatisfaction`, `OverTime`, `YearsSinceLastPromotion` | Must |
+| 2.2 | En tant que HR Business Partner, je veux comprendre quels facteurs sont associés à l'attrition (satisfaction, heures sup, ancienneté sans promotion, âge, revenu) afin d'agir sur les causes plutôt que sur le symptôme | Le dashboard croise `Attrition` avec au moins 3 facteurs différents, avec un test statistique associé, pas juste une intuition visuelle | Attrition vs `JobSatisfaction`, `OverTime`, `YearsSinceLastPromotion`, `Age`, `MonthlyIncome` | Must |
 
 ### Epic 3 : Suivre l'équité et le bien-être
 
