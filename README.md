@@ -30,6 +30,9 @@ hr-master-data-analytics/
 ├── data/
 │   ├── hr_employee_attrition.csv       # jeu de données source (IBM HR Analytics, public)
 │   └── processed/powerbi/              # score de risque exporté par le notebook 02
+├── dashboard/
+│   ├── hr_attrition_dashboard.pbix     # dashboard Power BI (2 pages)
+│   └── hr_attrition_dashboard.pdf      # export statique, pour consultation sans Power BI
 ├── notebooks/
 │   ├── 01_hr_analytics_kpis.ipynb      # audit qualité + KPIs + requêtage SQL + visualisations
 │   └── 02_attrition_risk_model.ipynb   # modèle de risque de départ + export Power BI
@@ -85,7 +88,12 @@ Un guide de lecture indépendant, pensé pour quelqu'un qui n'a pas écrit le co
 
 ## Dashboard Power BI
 
-Le notebook 02 exporte `data/processed/powerbi/hr_attrition_risk_scores.csv` (score et bande de risque par collaborateur, KPIs contextuels). Pas de fichier `.pbix` fourni : ouvrir Power BI Desktop, importer ce CSV, et construire les visuels décrits dans `BACKLOG.md` (Epic 2 et 3) à partir des champs `risk_score` / `risk_band`.
+Le notebook 02 exporte `data/processed/powerbi/hr_attrition_risk_scores.csv` (score et bande de risque par collaborateur, KPIs contextuels). Le dashboard construit à partir de ce CSV est dans `dashboard/hr_attrition_dashboard.pbix`, sur deux pages :
+
+- **Vue d'ensemble** : carte "Risque élevé", segments (Department, risk_band), taux d'attrition par département et par poste, taux d'attrition selon les heures supplémentaires et la satisfaction au poste.
+- **Risque et compléments** : répartition du risque par département, revenu moyen par genre et niveau de poste, bien-être moyen par département.
+
+Un export statique est disponible dans `dashboard/hr_attrition_dashboard.pdf`, pour consultation sans ouvrir Power BI Desktop.
 
 ## Principaux résultats (obtenus en exécutant les notebooks)
 
