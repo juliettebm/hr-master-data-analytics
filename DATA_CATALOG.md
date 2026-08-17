@@ -1,6 +1,6 @@
 # Catalogue de données : RH Employee Attrition
 
-Catalogue de données au sens gouvernance/Master Data : un inventaire structuré des champs, leur définition métier, leur qualité mesurée et les règles qui s'y appliquent. Ce n'est pas juste une liste de colonnes, c'est le document qu'on donnerait à un product owner ou à un nouvel analyste avant qu'il touche au jeu de données, pour éviter qu'il réinvente une définition métier ou rate une anomalie déjà connue.
+À lire avant de toucher au jeu de données : définition métier de chaque champ, qualité mesurée, règles à appliquer. Sert de référence commune pour ne pas réinterpréter un champ différemment d'un notebook à l'autre, ou rater une anomalie déjà identifiée.
 
 ## 1. Domaines métier (regroupement des champs)
 
@@ -72,4 +72,4 @@ Le jeu de données mélange plusieurs domaines Master Data qui, dans un vrai SI 
 
 ## 5. Utilisation
 
-Ce catalogue est la référence pour le notebook `notebooks/01_hr_analytics_kpis.ipynb` et pour le backlog produit (`BACKLOG.md`). Toute nouvelle user story qui introduirait un champ non listé ici doit d'abord passer par une mise à jour de ce catalogue, c'est la règle qu'on suivrait dans un vrai contexte de gouvernance Master Data.
+Référence pour le notebook `notebooks/01_hr_analytics_kpis.ipynb` et pour `BACKLOG.md`. Toute nouvelle user story qui introduirait un champ non listé ici passe d'abord par une mise à jour de ce catalogue.

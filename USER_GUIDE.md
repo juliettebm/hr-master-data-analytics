@@ -1,6 +1,6 @@
 # Guide utilisateur : Dashboard RH Attrition & Master Data
 
-Ce guide s'adresse à quelqu'un qui consulte les résultats (le dashboard ou le notebook exécuté) sans avoir écrit le code. Il répond à la user story 4.1 du backlog : comprendre chaque indicateur et sa limite, sans mal l'interpréter.
+Ce guide s'adresse à quelqu'un qui consulte les résultats (le dashboard ou le notebook exécuté) sans avoir écrit le code : comprendre chaque indicateur et sa limite, sans mal l'interpréter.
 
 ## 1. Avant de lire un chiffre : la donnée a été auditée
 
