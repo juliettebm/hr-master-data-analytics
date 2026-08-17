@@ -14,6 +14,15 @@ Une direction RH me confie le suivi de l'attrition et de l'équité salariale su
 
 Donner à la direction RH une vision fiable de l'attrition, de ses facteurs, et de l'équité salariale, appuyée sur un référentiel de données documenté plutôt que sur un export ponctuel. Avant de calculer le moindre KPI, je documente la donnée (dictionnaire de champs, règles de qualité), je cadre le besoin métier en user stories avec critères d'acceptation, et je requête en SQL. L'attrition n'est pas prédite ici, elle est mesurée et expliquée : la valeur est dans la méthode qui précède le chiffre.
 
+## Questions traitées
+
+- Où l'attrition se concentre-t-elle (département, poste) ?
+- Quels facteurs sont associés à un départ (heures supplémentaires, satisfaction au poste, ancienneté sans promotion, âge, revenu) ?
+- Existe-t-il un écart de rémunération par genre, à niveau de poste équivalent ?
+- Le bien-être perçu diffère-t-il selon le département ?
+- *(questions ad hoc, hors backlog initial)* La distance domicile-travail joue-t-elle un rôle ? Le niveau d'études influence-t-il l'écart de revenu entre partants et restants ?
+- *(notebook 02)* Peut-on estimer un score de risque de départ par collaborateur, pour prioriser la rétention avant le départ plutôt qu'après ?
+
 ## Structure du projet
 
 ```
