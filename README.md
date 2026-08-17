@@ -56,16 +56,17 @@ Le notebook 02 se lance de la même façon, une fois le 01 exécuté au moins un
 
 ### `01_hr_analytics_kpis.ipynb`
 
-1. **Mission et contexte**
+1. **Mission et contexte**, avec un premier aperçu réel des données (`head()`, `describe()`) avant tout calcul.
 2. **KPIs retenus** : les quatre indicateurs choisis et pourquoi, avant d'écrire la moindre ligne de calcul.
 3. **Audit qualité** : complétude, unicité de la clé primaire (`EmployeeNumber`), détection des champs constants (`EmployeeCount`, `Over18`, `StandardHours`), exécuté en code, pas vérifié à l'œil.
-4. **Requêtage SQL** (DuckDB, dialecte transposable à Snowflake) : les KPIs d'attrition par département et par poste sont écrits en `SELECT` / `GROUP BY` explicites, pas en `pandas.groupby` caché.
-5. **KPI attrition par département et par poste**, avec effectifs affichés à côté du taux pour ne pas lire un pourcentage hors contexte.
-6. **Facteurs associés à l'attrition** (heures supplémentaires, satisfaction au poste, ancienneté depuis la dernière promotion), chacun testé statistiquement (Chi², Mann-Whitney U), pas juste comparé visuellement.
-7. **Équité salariale par genre**, contrôlée par niveau de poste (`JobLevel`), pour éviter la moyenne brute trompeuse.
-8. **Bien-être par département** (Work-Life Balance déclaré).
-9. **Deux questions ad hoc** : distance domicile-travail par poste, revenu par niveau d'études, croisés avec l'attrition.
-10. **Synthèse**.
+4. **Analyse univariée et bivariée** : distributions (Age, MonthlyIncome, Attrition), heatmap de corrélation entre variables numériques, Age et revenu croisés avec l'attrition. Oriente les choix méthodologiques des sections suivantes (médiane plutôt que moyenne, tests non paramétriques).
+5. **Requêtage SQL** (DuckDB, dialecte transposable à Snowflake) : les KPIs d'attrition par département et par poste sont écrits en `SELECT` / `GROUP BY` explicites, pas en `pandas.groupby` caché.
+6. **KPI attrition par département et par poste**, avec effectifs affichés à côté du taux pour ne pas lire un pourcentage hors contexte.
+7. **Facteurs associés à l'attrition** (heures supplémentaires, satisfaction au poste, ancienneté depuis la dernière promotion), chacun testé statistiquement (Chi², Mann-Whitney U), pas juste comparé visuellement.
+8. **Équité salariale par genre**, contrôlée par niveau de poste (`JobLevel`), pour éviter la moyenne brute trompeuse.
+9. **Bien-être par département** (Work-Life Balance déclaré).
+10. **Deux questions ad hoc** : distance domicile-travail par poste, revenu par niveau d'études, croisés avec l'attrition.
+11. **Synthèse**.
 
 ### `02_attrition_risk_model.ipynb`
 
@@ -83,7 +84,8 @@ Le notebook 02 exporte `data/processed/powerbi/hr_attrition_risk_scores.csv` (sc
 - Trois facteurs testés sont statistiquement associés à l'attrition (p < 0,05) : faire des heures supplémentaires (p ≈ 8·10⁻²¹, l'association la plus forte des trois), la satisfaction au poste (p ≈ 5,6·10⁻⁴) et le nombre d'années depuis la dernière promotion (p ≈ 0,041).
 - Écart de revenu médian par genre, contrôlé par niveau de poste : entre -2,5 % et +2,0 % selon le niveau, aucun écart systémique marqué détecté à ce niveau d'agrégation sur ce jeu de données. C'est un résultat négatif, il est gardé tel quel plutôt que reformulé pour paraître plus intéressant.
 - Question ad hoc distance domicile-travail : sur le poste Healthcare Representative, les collaborateurs partis habitaient en moyenne 8,5 km plus loin que ceux restés, un effet localisé à certains postes plutôt que général.
-- Question ad hoc revenu par niveau d'études : à chaque niveau (y compris Doctor), les collaborateurs partis gagnaient entre 24,7 % et 35,0 % de moins que ceux restés.
+- Question ad hoc revenu par niveau d'études : l'écart de revenu médian entre partants et restants varie fortement selon le niveau, quasi nul chez les titulaires d'un Doctorat (2,2 %) jusqu'à 45,0 % chez les Bachelor, pas un effet uniforme.
+- Analyse bivariée : la corrélation la plus forte du jeu de données est entre `MonthlyIncome` et `JobLevel` (0,95). Les collaborateurs partis sont plus jeunes (32 ans médian contre 36) et moins bien payés (revenu médian 3202 contre 5204).
 - Modèle de risque de départ : régression logistique retenue (PR-AUC 0,598, ROC-AUC 0,798) contre une référence naïve à 0,155 PR-AUC, et contre une forêt aléatoire moins performante ici (PR-AUC 0,417). 285 collaborateurs classés en risque élevé sur 1 470.
 
 ## Stack
