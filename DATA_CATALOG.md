@@ -60,7 +60,7 @@ Le jeu de données mélange plusieurs domaines Master Data qui, dans un vrai SI 
 - **Collaborateur à risque** : au sens de ce projet, un collaborateur dont les caractéristiques (faible satisfaction, heures supplémentaires fréquentes, longue période sans promotion) sont statistiquement associées à l'attrition, pas un individu identifié nommément. Voir la limite méthodologique en fin de notebook.
 - **Master Data** vs **donnée transactionnelle** : dans ce catalogue, l'identité, l'organisation et l'ancienneté sont traitées comme des données de référence (peu volatiles), la satisfaction et la performance comme des données réévaluées périodiquement (enquêtes, campagnes annuelles). Cette distinction conditionne la fréquence de rafraîchissement attendue dans un vrai pipeline.
 
-## 4. Règles de qualité identifiées (audit exécuté dans le notebook, section 2)
+## 4. Règles de qualité identifiées (audit exécuté dans le notebook, section 3)
 
 | Règle | Constat | Action recommandée |
 |---|---|---|
